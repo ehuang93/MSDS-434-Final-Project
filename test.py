@@ -1,6 +1,8 @@
 from main import predict
 import pickle as pkl
 from sklearn.linear_model import LinearRegression
+import numpy as np
+import pandas as pd
 
 model = pkl.load(open('deployment.pkl','rb'))
 
