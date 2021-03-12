@@ -67,6 +67,9 @@ def run():
             data = pd.read_csv(file_upload)
             predictions = model.predict(data)
             st.write(predictions)
+            s = pd.DataFrame(predictions)
+            s2 = s.to_json(orient="index")
+            st.json(s2)
             
 if __name__ == '__main__':
     run()
